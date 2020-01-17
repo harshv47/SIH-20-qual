@@ -6,10 +6,15 @@
     "permissions": [
         "topSites", "history", "browsingData"
     ],
-    "content_script"
+    "content_scripts": [
+        {
+          "matches": ["https://example.com/*"],
+          "js": ["DOMinjection.js", "metaSession.js"]
+        }
+      ],
     "background":{
         "scripts":[
-            "topSites.js", "mouse.js"
+            "topSites.js"
         ]
     },
     "browser_action": {
