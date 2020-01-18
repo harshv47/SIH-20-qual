@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Custom Google Homepage",
-    "description": "This extension changes the background image of the google homepage",
+    "name": "CAPTCHA4All",
+    "description": "",
     "version": "1.0",
     "permissions": [
         "topSites", "history", "browsingData"

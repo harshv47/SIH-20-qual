@@ -17,7 +17,7 @@ function clickCounter(event) {
       var d1 = new Date();
       var curr = d1.getTime();
       if(curr>startTime){
-          ratio = 10000*clicks/(curr-startTime);
+          ratio = 1000000*clicks/(curr-startTime);
       }
       console.log(ratio);
       fetch(`http://localhost:3000/ratio?data=${ratio}`, {
