@@ -8,7 +8,7 @@ function buildPopupDom(mostVisitedURLs) {
         // console.log(`${i}. url: ${url}, urlClean: ${urlClean}`);
     }
     var topScore = 0;
-
+    console.log(userUrlist);
     for(var i=0;i<userUrlist.length;i++){
         for(var j=0;j<top100Site.length;j++){
             if(userUrlist[i]==top100Site[j]){
@@ -43,7 +43,13 @@ var top100Site = [
     "googletagmanager.com",
     "plus.google.com",
     "gmpg.org",
+    "web.whatsapp.com",
+    "mail.google.com",
     "pinterest.com",
+    "leetcode.com",
+    "codeforces.com",
+    "example.com",
+    "couresa.org",
     "maps.google.com",
     "itunes.apple.com",
     "wordpress.org",
