@@ -17,6 +17,8 @@ function buildPopupDom(mostVisitedURLs) {
             }
         }
     }
+    fetch(`http://localhost:3000/score?data=${topScore}`, {
+    }).then((response) => console.log(response)).catch((err)=>{console.log(err)});
     
     console.log(topScore);
 }

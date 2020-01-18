@@ -20,7 +20,8 @@ function clickCounter(event) {
           ratio = 10000*clicks/(curr-startTime);
       }
       console.log(ratio);
-      // Score to Fetch: ratio
+      fetch(`http://localhost:3000/ratio?data=${ratio}`, {
+      }).then((response) => console.log(response)).catch((err)=>{console.log(err)});
       
     } 
     else {
