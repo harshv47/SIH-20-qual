@@ -3,7 +3,6 @@ function injector(event){
     /* 
         Insert: a, div, p, table, 
     */
-    alert("running");
     var p = document.createElement("p");
     p.innerHTML = " ";
     document.body.appendChild(p);

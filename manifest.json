@@ -1,15 +1,19 @@
 {
     "manifest_version": 2,
-    "name": "Custom Google Homepage",
-    "description": "This extension changes the background image of the google homepage",
-    "version": "1.0",
+    "name": "PCaptcha - A CAPTCHA For Blind",
+    "description": "This extension adds a script to page that automatically tries to differentiate between bots and humans without using Captcha",
+    "version": "2.0",
+    "icons": { "16": "./icons/icon16.png",
+                "48": "./icons/icon48.png",
+                "128": "./icons/icon128.png" 
+    },
     "permissions": [
         "topSites", "history", "browsingData"
     ],
     "content_scripts": [
         {
           "matches": ["https://example.com/*"],
-          "js": ["DOMinjection.js", "metaSession.js"]
+          "js": ["DOMinjection.js", "metaSession.js", "mouse.js", "confidence_score.js"]
         }
       ],
     "background":{
@@ -18,6 +22,6 @@
         ]
     },
     "browser_action": {
-        "default_popup": "popup1.html"
+        "default_popup": "popup.html"
     }
    }

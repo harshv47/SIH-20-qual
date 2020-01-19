@@ -1,4 +1,5 @@
 var userUrlist = [];
+
 function buildPopupDom(mostVisitedURLs) {
     for (var i = 0; i < mostVisitedURLs.length; i++) {
         var url = mostVisitedURLs[i].url;
@@ -13,22 +14,27 @@ function buildPopupDom(mostVisitedURLs) {
         for(var j=0;j<top100Site.length;j++){
             if(userUrlist[i]==top100Site[j]){
                 topScore += 1;
-                console.log(userUrlist[i]);
+                // console.log(userUrlist[i]);
             }
         }
     }
-    fetch(`http://localhost:3000/score?data=${topScore}`, {
+    
+    // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    //     chrome.tabs.sendMessage(tabs[0].id, {greeting: "Hello"}, function(response) {
+    //       console.log(response.farewell);
+    //     });
+    // });
+
+    fetch(`http://localhost:3000/MostVisitedSites?data=${topScore}`, {
     }).then((response) => console.log(response)).catch((err)=>{console.log(err)});
     
-    console.log(topScore);
+    console.log(`Visited Sites Score: ${topScore/10}`);
+    // localStorage.setItem('visited_score', (topScore/10).toString())
 }
-chrome.topSites.get(buildPopupDom);
+
+chrome.topSites.get(buildPopupDom)
 
 
-/*fetch('https://jsonplaceholder.typicode.com/todos/1')
-.then(response => response.json())
-.then(json => console.log(json))
-*/
 
 var top100Site = [ 
     "fonts.googleapis.com",
@@ -113,6 +119,7 @@ var top100Site = [
     "businessinsider.com",
     "imdb.com",
     "washingtonpost.com",
+    "google.co.in",
     "eventbrite.com",
     "chrome.google.com",
     "lh4.googleusercontent.com",
@@ -123,6 +130,8 @@ var top100Site = [
     "yahoo.com",
     "lh6.googleusercontent.com",
     "telegraph.co.uk",
+    "git.sam-media.com",
+    "web.whatsapp.com",
     "google.de",
     "venturebeat.com",
     "amzn.to",
@@ -134,4 +143,4 @@ var top100Site = [
 ]
 
 
-// var to fetch : topScore
+// To fetch: topScore
