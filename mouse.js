@@ -8,7 +8,7 @@ function coordinate(event) {
     var y = event.clientY; 
     console.log(`X-coor: ${x}, and Y-coor: ${y}`);
  }
-//document.addEventListener("mousemove", coordinate);
+//document.addEventListener("mousemove",coordinate) ;
 function caller(event){
     coordinate(event);
     setTimeout(caller, 10);
