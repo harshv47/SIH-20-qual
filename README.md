@@ -8,4 +8,4 @@ An alternate for the current captcha that doesn't need the user to interact and 
 * [Harsh Vardhan](https://github.com/harshv47) 
 * [Sourav Kumar Sahu](https://github.com/SouravSahu)
 * [Utkarsh Deep](https://github.com/primalynative)
-* [Pradyumn gupta](https://github.com/PradyumnGupta)
+* [Pradyumn Gupta](https://github.com/PradyumnGupta)
