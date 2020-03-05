@@ -12,6 +12,7 @@ The first image shows the mouse movements of a human and the second one shows th
 
 We also release a trained model with weights based on Long Short Term Memory(LSTM) Networks stored in the Trained_Model_and_Weights folder.
 
+Please cite the repo and mail about the same to (pradyumna.gupta22@gmail.com) if using for publication purposes.
 
 ### Contributors
 * [Harsh Vardhan](https://github.com/harshv47) 
